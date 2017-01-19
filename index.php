@@ -1,3 +1,17 @@
+<?php 
+	
+	$codigo = "";
+
+	if (!empty($_GET['cod'])) 
+	{
+		$codigo = $_GET['cod'];
+	}
+	else
+	{
+		# Codigo...
+	}
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +32,17 @@
 			<input type="url" name="blog" placeholder="blog">
 			<input type="submit" value="Registrar">
 		</form>
+		<a href="procesos/listar.php">listarr</a>
 	</div>
+	<script>
+		<?php 
+			if ($codigo == "1")
+			{
+				?>
+				alert("El nombre de usuario esta actualmente utilizado");
+				<?php
+			}
+		 ?>
+	</script>
 </body>
 </html>
