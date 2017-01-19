@@ -1,0 +1,39 @@
+/*Estilos temporales para pruebas*/
+*
+{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+body
+{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*Estilos del formulario*/
+.formulario
+{
+	width: 40%;
+	padding:20px 10px 20px 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}
+.formulario form
+{
+	width: 100%;
+	padding: 0 20px 0 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.formulario form *
+{
+	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
+}
+/*Fin estilos del formulario*/
