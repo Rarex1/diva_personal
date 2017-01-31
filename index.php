@@ -1,48 +1,30 @@
-<?php 
-	
-	$codigo = "";
-
-	if (!empty($_GET['cod'])) 
-	{
-		$codigo = $_GET['cod'];
-	}
-	else
-	{
-		# Codigo...
-	}
-
- ?>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Inicio</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
-	<div class="formulario">
-		<form action="procesos/registro.php" method="POST">
-			<h3>Registro</h3>
-			<input type="text" name="nombre" placeholder="Nombre" required="required">
-			<input type="text" name="apellido" placeholder="Apellido" required="required">
-			<input type="mail" name="mail" placeholder="Correo electronico" required="required">
-			<input type="date" name="nacimiento" placeholder="Fecha de nacimiento" required="required">
-			<input type="text" name="telefono" placeholder="Telefono">
-			<input type="text" name="nick" placeholder="Nick name" required="required">
-			<input type="url" name="blog" placeholder="blog">
-			<input type="submit" value="Registrar">
-		</form>
-		<a href="procesos/listar.php">listarr</a>
+	<div class="inicio">
+	<img src="img/foto0.jpg" alt="">
+		<div class="content">
+			<h1>Diva Proyect</h1>
+			<form action="">
+				<input type="mail" placeholder="Correo electronico">
+				<input type="password" placeholder="Clave">
+				<input type="submit" value="Ingresar">
+			</form>
+		</div>
+		<div class="contRegistro">
+			<p>No tienes una cuenta ?</p>
+			<div>
+				<i class="fa fa-google-plus" aria-hidden="true"></i>
+				<i class="fa fa-facebook-square" aria-hidden="true"></i>
+			</div>
+		</div>
 	</div>
-	<script>
-		<?php 
-			if ($codigo == "1")
-			{
-				?>
-				alert("El nombre de usuario esta actualmente utilizado");
-				<?php
-			}
-		 ?>
-	</script>
 </body>
 </html>

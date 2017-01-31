@@ -20,7 +20,7 @@
 	if($filas > 0)
 	{
 		mysqli_close($conexion);
-		header("Location: ../index.php?cod=1");
+		header("Location: ../registroForm.php?cod=1");
 	}
 	else
 	{
