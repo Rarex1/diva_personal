@@ -34,7 +34,7 @@
 			</form>
 		</div>
 		<div class="contRegistro">
-			<a href="registroForm.php">Registrate</a>
+			<a href="selectRegistro.php">Registrate</a>
 		</div>
 	</div>
 </body>

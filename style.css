@@ -61,8 +61,8 @@ body
 	z-index: 1000;
 	width: : 100%;
 	font-family: Barrio;
-	color: white;
 	font-size: 24px;
+	color: white;
 }
 .content form
 {
@@ -131,4 +131,65 @@ body
 {
 	from {transform: rotate(0deg);}
 	to {transform: rotate(180deg);}
+}
+/*Estilo seleccion de registro*/
+.content2
+{
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: absolute;
+}
+.content2 .info, .content2 .opciones
+{
+	height: 50vh;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Barrio;
+}
+.content2 .opciones
+{
+	border-left: solid gray 2px;
+	display: flex;
+	justify-content: space-around;
+}
+.content2 .opciones button
+{
+	padding: 10px;
+	height: 100px;
+	width: 100px;
+	border-radius: 10px;
+	border-color: none;
+	border:none;
+	background-color: #45BF55;
+	color: white;
+	font-family: Arial;
+	font-size: 17px;
+	font-style: bold;
+	outline: none;
+}
+.content2 .info
+{
+	display: flex;
+	flex-direction: column;
+}
+.content2 .opcionesRegistro
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 200px;
+	margin-top: 20px; 
+}
+.activo
+{
+	position: absolute;
+	z-index: 1000;
+}
+.oculto
+{
+	display: none;
 }
