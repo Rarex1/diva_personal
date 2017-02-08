@@ -9,11 +9,14 @@
 	$tel = $_POST["telefono"];
 	$nic = $_POST["nick"];
 	$blo = $_POST["blog"];
+	$clv = $_POST["clave"];
 	/*Se genera la conecion a la base de datos*/
 	$con = new conexion();
 	$conexion = $con->getConexion();
+	/*Se genera una encriptacion SHA256 a la clave antes de guardar en base de datos*/
+	$hashed = crypt($clv, '$5$rounds=6524$SoMosArMinLovErsDeSignErs$');
 
-	$query = "insert into usuarios(nombre,apellido,email,fecha_nacimiento,telefono,nick,blog) values ('$nom','$ape','$mai','$nac','$tel','$nic','$blo');";
+	$query = "insert into usuarios(nombre,apellido,email,fecha_nacimiento,telefono,nick,blog,clave) values ('$nom','$ape','$mai','$nac','$tel','$nic','$blo','$hashed');";
 
 	$resultado = $conexion->query("select * from usuarios where nick = '$nic'");
 	$filas = mysqli_num_rows($resultado);
@@ -24,7 +27,7 @@
 	}
 	else
 	{
-		mysql_query($query);
+		$conexion->query($query);
 		mysqli_close($conexion);
 		echo "Se ingresaron correctamente los datos";
 	}

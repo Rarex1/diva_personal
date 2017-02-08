@@ -25,6 +25,7 @@
 			<h3>Registro</h3>
 			<input type="text" name="nombre" placeholder="Nombre" required="required">
 			<input type="text" name="apellido" placeholder="Apellido" required="required">
+			<input type="password" name="clave" placeholder="Clave">
 			<input type="mail" name="mail" placeholder="Correo electronico" required="required">
 			<input type="date" name="nacimiento" placeholder="Fecha de nacimiento" required="required">
 			<input type="text" name="telefono" placeholder="Telefono">
