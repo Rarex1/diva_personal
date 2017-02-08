@@ -78,7 +78,7 @@ body
 	border-radius: 50px;
 	border-color: black;
 	transition: ease;
-	outline: 0px;
+	outline: 0px; /*Borde azul de los input seleccionados*/
 }
 .content input[type=submit]
 {
@@ -88,6 +88,7 @@ body
 	border: 2px solid white;
 	border-radius: 50px;
 	color: white;
+	outline: 0px;
 }
 .contRegistro
 {
@@ -95,4 +96,39 @@ body
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+.contRegistro a
+{
+	font-style: none;
+	text-decoration: none;
+	color: white;
+	font-size: 19px;
+	font-family: Helvetica;
+}
+/*Estilos cargando*/
+#cargando
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: white;
+	z-index: 2000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#cargando img
+{
+	max-height: 100px;
+	transform: rotate(0deg);
+	animation-name: rotar;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes rotar
+{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(180deg);}
 }

@@ -6,8 +6,23 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.css">
+	<!--Import de Jquery version compatible con sintax de window.load-->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<!--Script de preloader-->
+	<script>
+		$(window).load(function () {
+	  $('#cargando').fadeOut();
+	});
+	</script>
 </head>
 <body>
+	<!--Preloader-->
+	<div id="cargando">
+		<img src="img/boton_1.png" alt="">
+		<br>
+		<p style="color: gray;">Cargando las ideas del mundo...</p>
+	</div>
+	<!--Inicio de pagina-->
 	<div class="inicio">
 	<img src="img/foto0.jpg" alt="">
 		<div class="content">
@@ -19,11 +34,7 @@
 			</form>
 		</div>
 		<div class="contRegistro">
-			<p>No tienes una cuenta ?</p>
-			<div>
-				<i class="fa fa-google-plus" aria-hidden="true"></i>
-				<i class="fa fa-facebook-square" aria-hidden="true"></i>
-			</div>
+			<a href="registroForm.php">Registrate</a>
 		</div>
 	</div>
 </body>
