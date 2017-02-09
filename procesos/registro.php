@@ -14,9 +14,11 @@
 	$con = new conexion();
 	$conexion = $con->getConexion();
 	/*Se genera una encriptacion SHA256 a la clave antes de guardar en base de datos*/
-	$hashed = crypt($clv, '$5$rounds=6524$SoMosArMinLovErsDeSignErs$');
+	$hashed = crypt($clv, '$5$rounds=6524$SoMosArMinLovErs$');
 
-	$pass_final = substr($hashed, 41);
+	echo "$hashed";
+
+	$pass_final = substr($hashed, 32);
 
 	$query = "insert into usuarios(nombre,apellido,email,fecha_nacimiento,telefono,nick,blog,clave) values ('$nom','$ape','$mai','$nac','$tel','$nic','$blo','$pass_final');";
 
