@@ -16,7 +16,9 @@
 	/*Se genera una encriptacion SHA256 a la clave antes de guardar en base de datos*/
 	$hashed = crypt($clv, '$5$rounds=6524$SoMosArMinLovErsDeSignErs$');
 
-	$query = "insert into usuarios(nombre,apellido,email,fecha_nacimiento,telefono,nick,blog,clave) values ('$nom','$ape','$mai','$nac','$tel','$nic','$blo','$hashed');";
+	$pass_final = substr($hashed, 41);
+
+	$query = "insert into usuarios(nombre,apellido,email,fecha_nacimiento,telefono,nick,blog,clave) values ('$nom','$ape','$mai','$nac','$tel','$nic','$blo','$pass_final');";
 
 	$resultado = $conexion->query("select * from usuarios where nick = '$nic'");
 	$filas = mysqli_num_rows($resultado);

@@ -27,9 +27,9 @@
 	<img src="img/foto0.jpg" alt="">
 		<div class="content">
 			<h1>Diva Proyect</h1>
-			<form action="">
-				<input type="mail" placeholder="Correo electronico">
-				<input type="password" placeholder="Clave">
+			<form action="procesos/validarUser.php" method="POST">
+				<input type="mail" name="mail" placeholder="Correo electronico">
+				<input type="password" name="password" placeholder="Clave">
 				<input type="submit" value="Ingresar">
 			</form>
 		</div>
